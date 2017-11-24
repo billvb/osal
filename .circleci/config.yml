@@ -9,6 +9,6 @@ jobs:
           name: "Update and install build tools"
           command: |
             sudo apt-get update
-            sudo apt-get install build-essential cmake clang
+            sudo apt-get install build-essential cmake clang libc6-dev-i386
 
 
