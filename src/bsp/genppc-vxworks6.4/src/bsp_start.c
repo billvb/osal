@@ -24,6 +24,7 @@
 #include <unistd.h>
 #include "vxWorks.h"
 #include "sysLib.h"
+#include "taskLib.h"
 
 /*
 ** OSAL includes 
