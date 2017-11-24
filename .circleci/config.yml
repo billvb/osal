@@ -1,8 +1,6 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:latest
     machine: true
     steps:
       - checkout
