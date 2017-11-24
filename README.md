@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/billvb/osal/tree/master.svg?style=svg)](https://circleci.com/gh/billvb/osal/tree/master)
+
 Operating System Abstraction Layer Project
 ==========================================
 
