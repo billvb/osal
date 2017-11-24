@@ -6,8 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Test env vars"
+          name: "Update and install build tools"
           command: |
-            export CATS="dogs"
-            echo $CATS
+            sudo apt-get update
+            sudo apt-get install build-essential cmake clang
+
 
