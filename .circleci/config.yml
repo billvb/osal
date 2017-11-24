@@ -20,7 +20,7 @@ jobs:
             make
       - run:
           name: "Run OSAL unit tests"
-          command:
+          command: |
             export BUILD_DIR=/home/circleci/build
             export OSAL_SRC=/home/circleci/project
             cd ${BUILD_DIR}
