@@ -10,5 +10,11 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install build-essential cmake clang libc6-dev-i386
-
-
+      - run:
+          name: "Build the OSAL"
+          command: |
+            export BUILD_DIR=/home/circleci/build
+            export OSAL_SRC=/home/circleci/project
+            mkdir ${BUILD_DIR} && cd ${BUILD_DIR}
+            cmake -DOSAL_SYSTEM_OSTYPE=posix -DOSAL_SYSTEM_BSPTYPE=pc-linux -DENABLE_UNIT_TESTS=TRUE -DOSAL_INCLUDEDIR=/home/circleci/project/src/bsp/pc-linux/config/ /home/circleci/project/
+            make
