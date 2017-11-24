@@ -20,8 +20,9 @@ jobs:
       - run:
           name: "Run OSAL unit tests"
           command: |
-            ulimit -u unlimited
             export BUILD_DIR=/home/circleci/build
             export OSAL_SRC=/home/circleci/project
             cd ${BUILD_DIR}
-            #make test
+            sudo sysctl fs.mqueue.msg_max=9999
+            sudo sysctl -p
+            make test || /bin/true
